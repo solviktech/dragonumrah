@@ -1,0 +1,41 @@
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+/* Hide scrollbar for horizontal scroll */
+::-webkit-scrollbar {
+  display: none;
+}
+/* flag slider 无限滚动动画 */
+.flag-slider {
+  display: flex;
+  width: fit-content;
+  animation: scroll-flags 40s linear infinite;
+}
+
+@keyframes scroll-flags {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/thumbs';
+@import 'swiper/css/autoplay';
+
+/* 已有的隐藏滚动条可保留 */
